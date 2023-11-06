@@ -180,12 +180,13 @@ def main():
 
 
     
-    proba = logr.predict_proba(X_train)
+    probaFromTrain = logr.predict_proba(X_train)
+    probaFromTest = logr.predict_proba(X_test)
+    combined = numpy.vstack((probaFromTrain, probaFromTest))
     
-    outPutDf = pd.DataFrame(proba, columns=['NotWin', 'Win'])[['Win']]
+    outPutDf = pd.DataFrame(combined, columns=['NotWin', 'Win'])[['Win']]
 
 
-    print (outPutDf)
     # print(testSet[['RaceID', 'FinishPosition']][:20])
     # print('--------------------------------')
     # print(y_true[:20])
