@@ -1,5 +1,4 @@
 import datetime
-import hashlib
 import matplotlib.pyplot as plt
 import numpy
 import pandas as pd
@@ -10,11 +9,10 @@ from sklearn import metrics
 from sklearn.feature_selection import f_classif, SelectKBest
 from sklearn.model_selection import cross_val_score, KFold, LeaveOneOut, train_test_split
 from sklearn.preprocessing import StandardScaler
-from sklearn.neighbors import KNeighborsClassifier
+# from sklearn.neighbors import KNeighborsClassifier
 
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import mean_squared_error, precision_score, classification_report
-import operator
+# from sklearn.ensemble import RandomForestRegressor
+# from sklearn.metrics import mean_squared_error, precision_score, classification_report
 
 
 numpy.set_printoptions(threshold=sys.maxsize)
